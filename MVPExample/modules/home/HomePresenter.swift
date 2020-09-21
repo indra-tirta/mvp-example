@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomePresenter: HomeViewToPresenter {
-    var router: HomePresenterToRouter?
-    var view: HomePresenterToView?
+class HomePresenter: HomeViewDelegate {
+    var router: HomeRouterDelegate?
+    var view: HomePresenterDelegate?
     
     func getMovies() {
         MovieService.shared.getAll { (movies) in

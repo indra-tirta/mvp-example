@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol AddMovieViewToPresenter: AnyObject {
-    var view: AddMoviePresenterToView? {get set}
+protocol AddMoviePresenterDelegate: AnyObject {
+    var view: AddMovieViewDelegate? {get set}
     func addMovie(_ movie: Movie)
     
-    var router: AddMoviePresenterToRouter? {get set}
+    var router: AddMovieRouterDelegate? {get set}
     func closeAddMovie()
 }
 
-protocol AddMoviePresenterToView: AnyObject {
-    var presenter: AddMovieViewToPresenter? {get set}
+protocol AddMovieViewDelegate: AnyObject {
+    var presenter: AddMoviePresenterDelegate? {get set}
 }
 
-protocol AddMoviePresenterToRouter: AnyObject {
+protocol AddMovieRouterDelegate: AnyObject {
     static func createModule() -> AddMovieVC
     func dismissAddMovie(view: UIViewController?)
 }

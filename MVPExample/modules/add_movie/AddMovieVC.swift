@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AddMovieVC: UIViewController, AddMoviePresenterToView {
+class AddMovieVC: UIViewController, AddMovieViewDelegate {
     @IBOutlet var textName: UITextField!
-    var presenter: AddMovieViewToPresenter?
+    var presenter: AddMoviePresenterDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

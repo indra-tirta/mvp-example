@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeVC: UIViewController, HomePresenterToView {
+class HomeVC: UIViewController, HomePresenterDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    var presenter: HomeViewToPresenter?
+    var presenter: HomeViewDelegate?
     var movies = [Movie]() {
         didSet {
             tableView.reloadData()

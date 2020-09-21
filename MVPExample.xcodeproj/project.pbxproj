@@ -101,45 +101,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		814A5E542516E5140080B274 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				816D4CB32516EC6B00244CE9 /* HomeVC.swift */,
-				816D4CB42516EC6B00244CE9 /* HomeVC.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		814A5E552516E51E0080B274 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				816D4CB92516EEFF00244CE9 /* Movie.swift */,
 			);
 			path = models;
-			sourceTree = "<group>";
-		};
-		814A5E562516E5270080B274 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-				816D4CBE2516EFC800244CE9 /* HomePresenter.swift */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		814A5E572516E5410080B274 /* router */ = {
-			isa = PBXGroup;
-			children = (
-				816D4CBC2516EF6400244CE9 /* HomeRouter.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		816D4CC02516F09D00244CE9 /* protocol */ = {
-			isa = PBXGroup;
-			children = (
-				816D4CC12516F0B500244CE9 /* HomeProtocol.swift */,
-			);
-			path = protocol;
 			sourceTree = "<group>";
 		};
 		816D4CC32516F3C700244CE9 /* services */ = {
@@ -161,45 +128,13 @@
 		816D4CC925170F3500244CE9 /* add_movie */ = {
 			isa = PBXGroup;
 			children = (
-				816D4CCA25170F5200244CE9 /* view */,
-				816D4CCB25170F5900244CE9 /* presenter */,
-				816D4CCC25170F6100244CE9 /* router */,
-				816D4CCD25170F6700244CE9 /* protocol */,
-			);
-			path = add_movie;
-			sourceTree = "<group>";
-		};
-		816D4CCA25170F5200244CE9 /* view */ = {
-			isa = PBXGroup;
-			children = (
 				816D4CCE25170FA400244CE9 /* AddMovieVC.swift */,
 				816D4CCF25170FA400244CE9 /* AddMovieVC.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		816D4CCB25170F5900244CE9 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
 				816D4CD42517117D00244CE9 /* AddMoviePresenter.swift */,
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		816D4CCC25170F6100244CE9 /* router */ = {
-			isa = PBXGroup;
-			children = (
 				816D4CD62517121D00244CE9 /* AddMovieRouter.swift */,
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		816D4CCD25170F6700244CE9 /* protocol */ = {
-			isa = PBXGroup;
-			children = (
 				816D4CD22517107700244CE9 /* AddMovieProtocol.swift */,
 			);
-			path = protocol;
+			path = add_movie;
 			sourceTree = "<group>";
 		};
 		81C864CC25150BD2002517B0 /* modules */ = {
@@ -214,10 +149,11 @@
 		81C864CD25150BD9002517B0 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				814A5E542516E5140080B274 /* view */,
-				814A5E562516E5270080B274 /* presenter */,
-				814A5E572516E5410080B274 /* router */,
-				816D4CC02516F09D00244CE9 /* protocol */,
+				816D4CB32516EC6B00244CE9 /* HomeVC.swift */,
+				816D4CB42516EC6B00244CE9 /* HomeVC.xib */,
+				816D4CBE2516EFC800244CE9 /* HomePresenter.swift */,
+				816D4CBC2516EF6400244CE9 /* HomeRouter.swift */,
+				816D4CC12516F0B500244CE9 /* HomeProtocol.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeRouter: HomePresenterToRouter {
+class HomeRouter: HomeRouterDelegate {
     
     static func createModule() -> HomeVC {
-        let presenter: HomeViewToPresenter = HomePresenter()
-        let router: HomePresenterToRouter = HomeRouter()
+        let presenter: HomeViewDelegate = HomePresenter()
+        let router: HomeRouterDelegate = HomeRouter()
         let view = HomeVC()
         
         presenter.view = view

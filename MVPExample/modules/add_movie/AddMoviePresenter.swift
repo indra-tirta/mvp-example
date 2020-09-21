@@ -8,8 +8,8 @@
 
 import UIKit
 
-class AddMoviePresenter: AddMovieViewToPresenter {
-    var view: AddMoviePresenterToView?
+class AddMoviePresenter: AddMoviePresenterDelegate {
+    var view: AddMovieViewDelegate?
     
     func addMovie(_ movie: Movie) {
         MovieService.shared.add(movie: movie)
@@ -18,7 +18,7 @@ class AddMoviePresenter: AddMovieViewToPresenter {
         })
     }
     
-    var router: AddMoviePresenterToRouter?
+    var router: AddMovieRouterDelegate?
     
     func closeAddMovie() {
         router?.dismissAddMovie(view: view as? UIViewController)

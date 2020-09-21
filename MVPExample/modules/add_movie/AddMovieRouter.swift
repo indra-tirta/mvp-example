@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AddMovieRouter: AddMoviePresenterToRouter {
+class AddMovieRouter: AddMovieRouterDelegate {
     static func createModule() -> AddMovieVC {
-        let router: AddMoviePresenterToRouter = AddMovieRouter()
-        let presenter: AddMovieViewToPresenter = AddMoviePresenter()
+        let router: AddMovieRouterDelegate = AddMovieRouter()
+        let presenter: AddMoviePresenterDelegate = AddMoviePresenter()
         let view = AddMovieVC()
         
         presenter.router = router

@@ -8,21 +8,21 @@
 
 import UIKit
 
-protocol HomeViewToPresenter: AnyObject {
-    var view: HomePresenterToView? {get set}
+protocol HomePresenterDelegate: AnyObject {
+    var view: HomeViewDelegate? {get set}
     func getMovies()
     func deleteMovie(_ movie: Movie)
     
-    var router: HomePresenterToRouter? {get set}
+    var router: HomeRouterDelegate? {get set}
     func openAddMovie()
 }
 
-protocol HomePresenterToView: AnyObject {
-    var presenter: HomeViewToPresenter? {get set}
+protocol HomeViewDelegate: AnyObject {
+    var presenter: HomePresenterDelegate? {get set}
     func showMovies(_ movies: [Movie])
 }
 
-protocol HomePresenterToRouter: AnyObject {
+protocol HomeRouterDelegate: AnyObject {
     static func createModule() -> HomeVC
     func presentAddMovie(viewController: UIViewController?)
 }
