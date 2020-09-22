@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomePresenter: HomeViewDelegate {
+class HomePresenter: HomePresenterDelegate {
     var router: HomeRouterDelegate?
-    var view: HomePresenterDelegate?
+    var view: HomeViewDelegate?
     
     func getMovies() {
         MovieService.shared.getAll { (movies) in
@@ -19,10 +19,9 @@ class HomePresenter: HomeViewDelegate {
     }
     
     func deleteMovie(_ movie: Movie) {
-        MovieService.shared.delete(movie: movie)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.getMovies()
-        })
+        MovieService.shared.delete(movie: movie) { (status) in
+            self.view?.didDeleteMovie(status)
+        }
     }
     
     func openAddMovie() {

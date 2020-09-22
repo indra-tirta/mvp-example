@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeVC: UIViewController, HomePresenterDelegate {
+class HomeVC: UIViewController, HomeViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    var presenter: HomeViewDelegate?
+    var presenter: HomePresenterDelegate?
     var movies = [Movie]() {
         didSet {
             tableView.reloadData()
@@ -49,6 +49,9 @@ class HomeVC: UIViewController, HomePresenterDelegate {
         self.movies = movies
     }
 
+    func didDeleteMovie(_ status: Bool) {
+        presenter?.getMovies()
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {

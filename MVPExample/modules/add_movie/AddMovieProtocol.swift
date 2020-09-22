@@ -18,6 +18,7 @@ protocol AddMoviePresenterDelegate: AnyObject {
 
 protocol AddMovieViewDelegate: AnyObject {
     var presenter: AddMoviePresenterDelegate? {get set}
+    func didAddMovie(_ status: Bool)
 }
 
 protocol AddMovieRouterDelegate: AnyObject {

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		59294E20116B8C509B0F4183 /* Pods_MVPExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23855A26FE522B91390C1BDB /* Pods_MVPExampleTests.framework */; };
+		810648812519B86800DAF86D /* AddMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810648802519B86800DAF86D /* AddMovieTests.swift */; };
 		814A5E592516E65B0080B274 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 814A5E582516E65B0080B274 /* GoogleService-Info.plist */; };
+		815A67EC2518AC8B0058AEB2 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815A67EB2518AC8B0058AEB2 /* HomeTests.swift */; };
 		816D4CB52516EC6B00244CE9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4CB32516EC6B00244CE9 /* HomeVC.swift */; };
 		816D4CB62516EC6B00244CE9 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816D4CB42516EC6B00244CE9 /* HomeVC.xib */; };
 		816D4CBA2516EEFF00244CE9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4CB92516EEFF00244CE9 /* Movie.swift */; };
@@ -47,7 +49,9 @@
 		2531513AC5120D03B894749A /* Pods-MVPExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPExampleTests.release.xcconfig"; path = "Target Support Files/Pods-MVPExampleTests/Pods-MVPExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		483BE87B859B4705D99CA736 /* Pods-MVPExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPExample.release.xcconfig"; path = "Target Support Files/Pods-MVPExample/Pods-MVPExample.release.xcconfig"; sourceTree = "<group>"; };
 		65CCBFF4E4421CCCB7AE44BE /* Pods_MVPExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVPExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		810648802519B86800DAF86D /* AddMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieTests.swift; sourceTree = "<group>"; };
 		814A5E582516E65B0080B274 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		815A67EB2518AC8B0058AEB2 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		816D4CB32516EC6B00244CE9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		816D4CB42516EC6B00244CE9 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		816D4CB92516EEFF00244CE9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -101,12 +105,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8106487F2519B84F00DAF86D /* add_movie */ = {
+			isa = PBXGroup;
+			children = (
+				810648802519B86800DAF86D /* AddMovieTests.swift */,
+			);
+			path = add_movie;
+			sourceTree = "<group>";
+		};
 		814A5E552516E51E0080B274 /* models */ = {
 			isa = PBXGroup;
 			children = (
 				816D4CB92516EEFF00244CE9 /* Movie.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		815A67EA2518AC6E0058AEB2 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				815A67EB2518AC8B0058AEB2 /* HomeTests.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		816D4CC32516F3C700244CE9 /* services */ = {
@@ -198,6 +218,8 @@
 		81EDB6C524EBC22600D0CFF6 /* MVPExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				8106487F2519B84F00DAF86D /* add_movie */,
+				815A67EA2518AC6E0058AEB2 /* home */,
 				81EDB6C624EBC22600D0CFF6 /* MVPExampleTests.swift */,
 				81EDB6C824EBC22600D0CFF6 /* Info.plist */,
 			);
@@ -405,6 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810648812519B86800DAF86D /* AddMovieTests.swift in Sources */,
+				815A67EC2518AC8B0058AEB2 /* HomeTests.swift in Sources */,
 				81EDB6C724EBC22600D0CFF6 /* MVPExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

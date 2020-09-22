@@ -11,7 +11,7 @@ import UIKit
 class HomeRouter: HomeRouterDelegate {
     
     static func createModule() -> HomeVC {
-        let presenter: HomeViewDelegate = HomePresenter()
+        let presenter: HomePresenterDelegate = HomePresenter()
         let router: HomeRouterDelegate = HomeRouter()
         let view = HomeVC()
         

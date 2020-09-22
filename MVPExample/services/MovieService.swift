@@ -14,8 +14,8 @@ class MovieService {
     let movieRef = Database.database().reference().child("movies")
     
     func getAll(completionHandler: @escaping ([Movie]) -> Void) {
+        var movies = [Movie]()
         movieRef.queryOrdered(byChild: "date_added").observe(.value) { (snapshot) in
-            var movies = [Movie]()
             
             for child in snapshot.children.allObjects as! [DataSnapshot] {
                 if let value = child.value as? NSDictionary {
@@ -27,20 +27,21 @@ class MovieService {
             }
             
             movies.reverse()
-
-            completionHandler(movies)
         }
+        completionHandler(movies)
     }
     
-    func add(movie: Movie) {
+    func add(movie: Movie, completionHandler: @escaping (Bool) -> Void) {
         let params: [String: Any] = [
             "name": movie.name ?? "",
             "date_added": movie.dateAdded?.timeStamp ?? 0
         ]
         movieRef.childByAutoId().setValue(params)
+        completionHandler(true)
     }
     
-    func delete(movie: Movie) {
+    func delete(movie: Movie, completionHandler: @escaping (Bool) -> Void) {
         movieRef.child(movie.id).removeValue()
+        completionHandler(true)
     }
 }

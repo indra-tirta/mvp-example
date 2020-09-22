@@ -12,10 +12,9 @@ class AddMoviePresenter: AddMoviePresenterDelegate {
     var view: AddMovieViewDelegate?
     
     func addMovie(_ movie: Movie) {
-        MovieService.shared.add(movie: movie)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.closeAddMovie()
-        })
+        MovieService.shared.add(movie: movie) { (status) in
+            self.view?.didAddMovie(status)
+        }
     }
     
     var router: AddMovieRouterDelegate?

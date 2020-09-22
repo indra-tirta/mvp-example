@@ -20,9 +20,9 @@ protocol HomePresenterDelegate: AnyObject {
 protocol HomeViewDelegate: AnyObject {
     var presenter: HomePresenterDelegate? {get set}
     func showMovies(_ movies: [Movie])
+    func didDeleteMovie(_ status: Bool)
 }
 
 protocol HomeRouterDelegate: AnyObject {
-    static func createModule() -> HomeVC
     func presentAddMovie(viewController: UIViewController?)
 }

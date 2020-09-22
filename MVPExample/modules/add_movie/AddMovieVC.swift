@@ -32,4 +32,8 @@ class AddMovieVC: UIViewController, AddMovieViewDelegate {
     @objc func closePage() {
         presenter?.closeAddMovie()
     }
+    
+    func didAddMovie(_ status: Bool) {
+        presenter?.closeAddMovie()
+    }
 }
